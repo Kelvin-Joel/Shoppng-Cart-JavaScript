@@ -1,0 +1,34 @@
+@use './Mixins' as mixin;
+@use  './Variables' as variables;
+.navbar{
+    @include mixin.flex_box(flex,space-between,center,null);
+    box-shadow: 0 0 3px #333;
+    font-size: variables.$TextSize;
+    padding: .8em;
+    margin-bottom: 2em;
+    padding-right: 2em;
+    position: fixed;
+    width: 100%;
+    @include mixin.sizes(null,100%);
+    background-color: variables.$ColorWhite;
+    .navbar__icon{
+        @include mixin.sizes(100%,50px);
+        position: relative;
+        .navbar__iconCart{
+            @include mixin.sizes(100%,30px);
+            cursor: pointer;
+        }
+    }
+    .navbar__quantity{
+        position: absolute;
+        @include mixin.sizes(20px,20px);
+        border-radius: 50%;
+        background-color: rgb(250, 23, 23);
+        top: -.5em;
+        left: 1.5em;
+        color: variables.$ColorWhite;
+        font-size: .8em;
+        font-weight: bold;
+        @include mixin.flex_box(flex,center,center,null);
+    }
+}

@@ -1,0 +1,55 @@
+@use "./Variables" as variables;
+@use "./Mixins" as mixin;
+
+.cart {
+  position: fixed;
+  @include mixin.sizes(100vh,100%);
+  background-color: variables.$ColorWhite;
+  top: 0;
+  padding-left: 1em;
+  .cart__title {
+    font-size:variables.$TextSize;
+    text-align: center;
+  }
+  .cart__btnClose {
+    @include mixin.sizes(40px,40px);
+    margin-left: 2em;
+    margin-bottom: 2em;
+    cursor: pointer;
+  }
+  .cart__products-list{
+    @include mixin.sizes(350px,50%);
+    overflow-y: scroll;
+    margin-bottom: 1em;
+  }
+}
+
+.cart__product {
+  padding: 0.8em;
+  @include mixin.flex_box(flex, space-between, center, null);
+  @include mixin.sizes(null,100%);
+  border: 1px solid #ccc;
+  margin-bottom: 1em;
+  .cart__productImg {
+    @include mixin.sizes(70px,80px);
+  }
+  .btn {
+    border-radius: 50%;
+    background-color: rgb(245, 89, 16);
+    color: variables.$ColorWhite;;
+    @include mixin.sizes(40px,40px);
+    font-size: 1em;
+    cursor: pointer;
+  }
+  .cart_deleteBtn {
+    @include mixin.sizes(40px,40px);
+    cursor: pointer;
+  }
+}
+.total__saleBuy {
+  display: block;
+}
+
+.cart--hidden {
+  display: none;
+}

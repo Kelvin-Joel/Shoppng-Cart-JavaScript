@@ -1,0 +1,7 @@
+@use "./Mixins" as mixin;
+
+@media screen and (max-width:768px){
+    .cart__products-list{
+        @include mixin.sizes(350px,100% !important) ;
+    }
+}

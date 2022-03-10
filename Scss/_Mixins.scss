@@ -1,0 +1,10 @@
+@mixin sizes($height,$width) {
+    height: $height;
+    width: $width;
+}
+@mixin flex_box($flex,$justify_content,$align_items,$flex_wrap) {
+    display: $flex;
+    justify-content: $justify_content;
+    align-items: $align_items;
+    flex-wrap: $flex_wrap;
+}

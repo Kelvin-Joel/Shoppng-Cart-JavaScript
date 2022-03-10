@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShoppinCart!</title>
+    <link rel="stylesheet" href="./Css/Styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__logo">ShoppinCart</div>
+      <div class="navbar__icon">
+        <img src="./IMG/carros.png" alt="" class="navbar__iconCart" id="navbar__iconCart"/>
+        <span class="navbar__quantity" id="navbar__quantity">0</span>
+      </div>
+    </nav>
+
+    <div class="products__list" id="products__list" >
+    </div>
+
+    <div class="cart cart--hidden" id="cart">
+      <h1 class="cart__title">Products Added Cart</h1>
+      <img src="./IMG/cancel.png" alt="" class="cart__btnClose" id="cart__btnClose"/>
+      <div class="cart__products-list" id="cart__productsList">
+      </div>
+
+      <div class="total">
+        <span class="total__saleBuy " id="total"></span>
+        <span class="total__units " id="total__units"></span>
+      </div>
+    </div>
+    <script src="./Js/index.js" type="module"></script>
+  </body>
+</html>

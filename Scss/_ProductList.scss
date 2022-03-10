@@ -1,0 +1,37 @@
+@use "./Mixins" as mixin;
+@use "./Variables" as variables;
+.products__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  place-items: center;
+  text-align: center;
+  padding-top: 7em;
+  width: 100%;
+  @include mixin.sizes(null, 100%);
+}
+.products__card {
+  @include mixin.sizes(null, 250px);
+  padding: 1em;
+  box-shadow: 0 0 3px #ccc;
+  margin-bottom: 1em;
+}
+.product__img {
+  @include mixin.sizes(130px, 80%);
+  margin-bottom: 1em;
+  background-size: cover;
+}
+.product__name,
+.product__price {
+  margin-bottom: 1em;
+}
+.product__btn-add {
+  color: variables.$ColorWhite;
+  display: block;
+  @include mixin.sizes(null, 100%);
+  width: 100%;
+  padding: 0.8em 0;
+  background-color: rgb(36, 36, 253);
+  border-radius: 0.2em;
+  cursor: pointer;
+  margin-top: 1em;
+}
